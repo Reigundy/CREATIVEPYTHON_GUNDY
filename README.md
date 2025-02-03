@@ -12,3 +12,5 @@ This repo is where I store my work documentation for CC: PYTHON, Spring 2025. Th
  
 
 relative path = path of image to path of image
+
+A lot of my learning will come from [here](https://www.w3schools.com/python/), as well as any resources provided in class.  
