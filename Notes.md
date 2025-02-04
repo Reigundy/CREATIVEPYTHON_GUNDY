@@ -51,3 +51,23 @@ True
 
 My_numbers[1:4]
 will go into the list (array titled 'my numbers' and get the entries 1-4 and display them.)
+
+## Class 2
+
+Blah- yes okay code sketches art and ideation are based on a grid system. (you place things on the grid, lines dots etc).
+
+Setup() vs draw ()
+Set up, I want these things to just exist... 
+Draw, I want this fuction to draw repeatdly  and always draw when your mouth moves.
+
+can add background colors to set up with 
+background(hex code)
+
+using
+for column in range(6):
+ for row in range(6):
+ circle(column*80, row * 80, 50)
+
+ This is how you get a grid.... ^^
+
+ In python the name of a "key" in a dictionary needs to be wrapped in double quotes
