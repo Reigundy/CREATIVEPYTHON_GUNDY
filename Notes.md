@@ -71,3 +71,13 @@ for column in range(6):
  This is how you get a grid.... ^^
 
  In python the name of a "key" in a dictionary needs to be wrapped in double quotes
+
+key_value = e.get_key()
+if key_value.lower() == 's':
+    save('sketch.jpg')
+
+Set up a save function ^ this function saves the sketch in the same place the python file is from. 
+
+ Homework: 
+ Find an artwork that you like and recreate it with py5
+ due next sunday at Midnight
