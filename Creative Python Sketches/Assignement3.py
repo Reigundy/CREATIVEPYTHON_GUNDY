@@ -85,3 +85,6 @@ try:
 
 except KeyboardInterrupt:
     print('Twists, by Al Sweigart al@inventwithpython.com 2024')
+    "https://github.com/asweigart/scrollart/blob/main/python/twists.py"
+
+    

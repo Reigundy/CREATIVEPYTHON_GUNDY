@@ -154,3 +154,4 @@ def draw():
     text(f"Mouse: ({mouse_x}, {mouse_y})", 20, 20)  # Display in top-left corner
     
 run_sketch()
+
