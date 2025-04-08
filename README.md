@@ -167,3 +167,61 @@ I pivoted to [Cosmopolitan’s telenovela list](https://www.cosmopolitan.com/ent
 ✅ *Scraped, saved, and survived.*
 
 ---
+
+## 🕸️ Final Project: Stole Help
+I need to be grinding on making my Thesis more effective, so all the Ideas I came up with are related to adding onto my thesis. **TRUST ME IT SUCKS**
+
+**Potential Projects**
+-  Mini Games
+-  Interactive Polls/Surveys
+-  Sticker Drag and Drop Tool
+  
+
+1. Mini Games 
+Develop a small group  simple minigames with top assets themed like something Thesis Related
+
+Technologies: Python for the backend (Flask), HTML/CSS/JavaScript for the frontend, and basic game logic.
+Assets: Simple graphics/icons (you can create these using free tools like Canva or GIMP).
+Implementation Plan:
+
+Backend:
+Flask server?
+recording scores?
+
+
+Frontend:
+Design an interactive interface using HTML/CSS and JavaScript.
+Phaser (for complex game logic)
+Assets: Create simple graphics for buttons and backgrounds.
+CSS animations and transitions to enhance user experience.?
+
+
+2. Interactive Polls and Surveys
+I'd Love to have some polls going around where I can maybe have even the people I  have doing the survey in the room, all the results will show up on the computer.
+
+
+Backend:
+Set up a Flask server to handle polling data (creating, fetching, and storing responses).
+Data storage?
+
+Frontend:
+Design a poll/survey form using HTML/CSS.
+JavaScript to dynamically update results without having refreshing the page (using AJAX).
+Visualization: Use Chart.js for rendering poll results visually.
+Style the poll/survey with CSS to make it more engaging!
+
+
+3. Art/Design Customization Tool
+Project Overview:
+I want to have a couple backgrounds and stickers, where the user can drag and drop different graffiti peices, and make a piece to save and send to themselves. 
+
+Technologies: HTML5 Canvas for drawing, JavaScript for interactivity.
+Assets: My Pictures
+
+Frontend:
+Use HTML5 Canvas to allow users to draw and customize elements.
+Implement JavaScript functions to handle drawing and customization features (colors, shapes, text).
+
+Backend (optional):
+Flask server to save user-created designs. 
+Final Touches: Add visual styles, user instructions, and buttons for saving designs (use local storage if backend isn't implemented).
