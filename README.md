@@ -172,7 +172,7 @@ I pivoted to [Cosmopolitan’s telenovela list](https://www.cosmopolitan.com/ent
 I need to be grinding on making my Thesis more effective, so all the Ideas I came up with are related to adding onto my thesis. **TRUST ME IT SUCKS**
 
 **Potential Projects**
--  Mini Games
+-  Mini Games (Mini Games)
 -  Interactive Polls/Surveys
 -  Sticker Drag and Drop Tool
   
@@ -225,3 +225,5 @@ Implement JavaScript functions to handle drawing and customization features (col
 Backend (optional):
 Flask server to save user-created designs. 
 Final Touches: Add visual styles, user instructions, and buttons for saving designs (use local storage if backend isn't implemented).
+
+Image to Text , LLM
