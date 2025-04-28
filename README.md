@@ -146,10 +146,10 @@ Pick a dataset and explore it visually by asking 1–3 guiding questions. This c
 **Prompt:**  
 Practice web scraping on a site you’re interested in or contains info for your research. Scrape paragraphs, headings, or images. Document your code, your process, and any errors. Save results to CSV or screenshot your image folder. Submit with your code and README.
 
-**What I Tried First (The Chaos):**  
+**What I Tried First :**  
 I started with a list on IMDB — [Top Telenovelas of All Time](https://www.imdb.com/list/ls004944935/). Looked perfect, *felt* perfect… until I got hit with a **504 error** (might’ve been 503 tbh, trauma blocked it). After some digging (aka Googling like a maniac), I realized **IMDB doesn't allow scraping**. They’ve got a whole **robots.txt** file that blocks bots like mine. I’ll admit it, I got humbled by a text file. LMAO.
 
-**What I Did Instead (The Recovery Arc):**  
+**What I Did Instead :**  
 I pivoted to [Cosmopolitan’s telenovela list](https://www.cosmopolitan.com/entertainment/tv/news/a31651/10-best-novelas-of-all-time/) — and boom, success. I used `requests` and `BeautifulSoup` to scrape the H2 headers (which contained the novela titles), printed them to the console, and saved them to a `.txt` file.
 
 **Code Highlights:**
@@ -167,6 +167,39 @@ I pivoted to [Cosmopolitan’s telenovela list](https://www.cosmopolitan.com/ent
 ✅ *Scraped, saved, and survived.*
 
 ---
+
+# 🎭 Assignment 9: Bad UI/UX — Tkinter Disaster
+
+**✨ Prompt** 
+Come up with a bad UI or UX (user interface/user experience) design. Create it using tkinter 
+Make sure it’s confusing, weird, annoying — or all three. Document the process and show what makes it bad.
+
+
+**🏃‍♂️ What I Tried First**
+I started simple — using the log in page login page where the username and password fields automatically delete themselves after a few seconds.  
+My goal was to take this code and make it worse.
+
+
+
+**🔁 What I Did Instead** 
+I made a new version where:
+- The input fields randomly jump around every second and a half
+- Labels randomly switch between "Username" and "Password" to confuse you
+- Hitting "Submit?" always says your wrong, no matter what you enter
+- Inputs get erased mmediatley after you fail
+
+Basically, it’s a chaotic guessing game — exactly the awful experience you (don’t) want.
+
+---
+
+ **Code Highlights**
+- Used `random.randint()` to *scramble* where the labels and input boxes appear
+- Randomly swapped the label texts to mess with expectations
+- Made a fake login button thatnever succeeds and clears the dats
+- Added `root.after(1500, scramble_form)` so the form constantly shuffles
+
+## 🖥️ Code
+> Full code [here in the repo](./GCI/Assignment9.py)
 
 ## 🕸️ Final Project: Stole Help
 I need to be grinding on making my Thesis more effective, so all the Ideas I came up with are related to adding onto my thesis. **TRUST ME IT SUCKS**
