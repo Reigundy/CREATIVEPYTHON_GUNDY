@@ -1,0 +1,116 @@
+Who Said That? – Dev Diary
+This project started off really small. I wanted to create a quick memory/observation game with minimal tech. The original idea was:
+
+"Someone says something rude to you — can you remember who it was and what they said?"
+
+ Phase 1: Bare Minimum with Tkinter
+I first coded just the core game states using Tkinter: a main menu, a scene where someone says something rude, and a guessing screen with buttons representing different characters. I kept the logic tight:
+
+python
+Copy
+def create_main_menu(self):
+    # Create dropdown to choose difficulty and start button
+From the start, I knew I didn’t need anything beyond Tkinter — no need for game engines or frameworks. The game logic was simple:
+→ show a character → they say something → you guess who and what → get scored.
+
+ Phase 2: AI Sprites + Real Content
+The next step was to build out the actual game content. I used AI to generate the character portraits — I ended up with 200 unique faces, each meant to represent a random, diverse person who might plausibly say something out-of-pocket.
+
+Then I added those portraits into the game like this:
+
+python
+Copy
+def find_valid_images(self):
+    # Pulls all files named like output (0).jpg from the Character Assets folder
+I also added a list of rude quotes — some were coded, passive-aggressive microaggressions, others were intentionally offbeat or absurd. The game became as much a commentary as a mechanic.
+
+Phase 3: Scoring System Design
+Once I had characters and quotes in, the next major challenge was designing a scoring system that felt fair and meaningful.
+
+I wanted the player to be scored based on:
+
+Choosing the right person
+
+Typing their quote correctly
+
+The quote-typing score is calculated letter-by-letter:
+
+python
+Copy
+def calculate_score(player_input, correct_text):
+    # Compares typed quote with actual quote, char by char
+Originally the score was a percentage. But that didn't feel satisfying enough — especially if you’re playing multiple rounds. So I switched it to a point system with multipliers based on difficulty:
+
+python
+Copy
+self.total_score += round(base_score * self.config.point_multiplier)
+🔁 Phase 4: Rounds + Replayability
+The game is short — just one quote at a time — so I added a round system that lets players keep playing, banking their score and increasing difficulty as they go. Between rounds, the player chooses their difficulty:
+
+python
+Copy
+def choose_round_difficulty(self):
+    # Let player pick Easy, Medium, or Hard each round
+Each difficulty tier changes:
+
+How many people are in the grid
+
+How fast the quote is shown
+
+How many points you can earn (e.g. 10 for Easy, 50 for Medium, 100 for Hard)
+
+Medium and Hard also include a grid shuffle mechanic that makes the guessing phase more chaotic.
+
+🔊 Phase 5: Adding Sound with Pygame
+Originally, I wasn't even going to use pygame — I didn’t need it for visuals. But once the mechanics were in place, I realized sound could take this project to the next level. So I brought it in just for sound and music.
+
+Here’s how I handled it:
+
+python
+Copy
+def play_sound(filename):
+    # Plays a one-shot sound effect (e.g. typewriter, buzzer)
+python
+Copy
+def play_music(track, loop=-1):
+    # Plays background music and loops it
+Sounds I included:
+
+Typewriter click when the quote appears
+
+Card shuffle noise during grid transitions
+
+Buzzer and chime depending on if you’re right or wrong
+
+Score counter sound on round end
+
+Looping intro and in-game background tracks
+
+I also built a volume slider and sound toggle so players can mute or adjust sound live from the menu.
+
+🏁 Final Features
+Round-based difficulty system
+
+Dynamic quote matching and scoring
+
+200 AI-generated characters
+
+Soundtrack and effects through Pygame
+
+Commented, readable code so others can learn or build on it
+
+ reflections
+This was a quick build, but it evolved into something way more thoughtful. It's about memory, pattern recognition, identity, and tone — but it also became a small critique of how easily we internalize or misattribute harmful speech.
+
+I used basic tech (Tkinter + Pygame), but got a lot of mileage by focusing on creative constraint and content-first design. Honestly, Tkinter held up — and with the sound layer added, the game feels full.
+
+If I kept working on this, I’d explore:
+
+Tracking high scores across sessions
+
+Player stats or a streak system
+
+Exporting to standalone apps for easy sharing
+
+Adding character bios or randomized voices
+
