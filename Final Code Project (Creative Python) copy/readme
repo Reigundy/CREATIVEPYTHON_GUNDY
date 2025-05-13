@@ -1,16 +1,17 @@
-Who Said That? – Dev Diary
+Who Said That? 
 This project started off really small. I wanted to create a quick memory/observation game with minimal tech. The original idea was:
 
-"Someone says something rude to you — can you remember who it was and what they said?"
+Someone says a Micro Agression to you? What do they look like?
 
  Phase 1: Bare Minimum with Tkinter
 I first coded just the core game states using Tkinter: a main menu, a scene where someone says something rude, and a guessing screen with buttons representing different characters. I kept the logic tight:
 
-python
-Copy
+See Figures 1-4
+
 def create_main_menu(self):
-    # Create dropdown to choose difficulty and start button
-From the start, I knew I didn’t need anything beyond Tkinter — no need for game engines or frameworks. The game logic was simple:
+    create dropdown to choose difficulty and start button
+About an hour in I realized I wouldnt need anything for the UI but tinkster.
+
 → show a character → they say something → you guess who and what → get scored.
 
  Phase 2: AI Sprites + Real Content
@@ -18,11 +19,9 @@ The next step was to build out the actual game content. I used AI to generate th
 
 Then I added those portraits into the game like this:
 
-python
-Copy
 def find_valid_images(self):
     # Pulls all files named like output (0).jpg from the Character Assets folder
-I also added a list of rude quotes — some were coded, passive-aggressive microaggressions, others were intentionally offbeat or absurd. The game became as much a commentary as a mechanic.
+I also added a list of rude quotes — some were coded, passive-aggressive microaggressions, others were intentionally offbeat or absurd.
 
 Phase 3: Scoring System Design
 Once I had characters and quotes in, the next major challenge was designing a scoring system that felt fair and meaningful.
@@ -35,20 +34,17 @@ Typing their quote correctly
 
 The quote-typing score is calculated letter-by-letter:
 
-python
-Copy
+
 def calculate_score(player_input, correct_text):
     # Compares typed quote with actual quote, char by char
 Originally the score was a percentage. But that didn't feel satisfying enough — especially if you’re playing multiple rounds. So I switched it to a point system with multipliers based on difficulty:
 
-python
-Copy
+
 self.total_score += round(base_score * self.config.point_multiplier)
 🔁 Phase 4: Rounds + Replayability
 The game is short — just one quote at a time — so I added a round system that lets players keep playing, banking their score and increasing difficulty as they go. Between rounds, the player chooses their difficulty:
 
-python
-Copy
+
 def choose_round_difficulty(self):
     # Let player pick Easy, Medium, or Hard each round
 Each difficulty tier changes:
